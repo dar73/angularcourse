@@ -1,0 +1,14 @@
+
+<p>click on button to view/disable data</p>
+<button *ngIf="isCollapsed" (click)="toggle()">Expand </button>
+<button *ngIf="!isCollapsed" (click)="toggle()">Collapse </button>
+
+<div *ngIf="!isCollapsed">
+  <p> expanded</p>
+  <p>{{user.name}}</p>
+  <p>{{user.address}}</p>
+  <p>{{user.phno}}</p>
+</div>
+<br ><br>
+<!-- two way binding -->
+<input type="text" [(ngModel)]="inputText">{{inputText}} 
